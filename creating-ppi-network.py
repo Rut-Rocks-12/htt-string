@@ -1,6 +1,8 @@
 import pandas as pd
 from rdflib import Graph
 import networkx as nx
+import matplotlib.pyplot as plt
+
 # Load RDF file
 g = Graph()
 g.parse("huntington_string.rdf", format="turtle")
