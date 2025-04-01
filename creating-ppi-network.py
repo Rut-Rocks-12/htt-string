@@ -14,10 +14,6 @@ for subj, _, obj in g:
     protein2 = obj.split("/")[-1]
     data.append((protein1, protein2))
 
-# Save as CSV for Cytoscape
-df = pd.DataFrame(data, columns=["Protein A", "Protein B"])
-df.to_csv("huntington_string.csv", index=False)
-
 # Create NetworkX graph
 G = nx.Graph()
 for subj, _, obj in g:
